@@ -1,9 +1,7 @@
-(function () {
-
-  window.EventEmitter = EventEmitter;
+module.exports = eventEmitter;
 
   // our EventEmitter contructor function
-  function EventEmitter () {
+  const eventEmitter = function EventEmitter () {
     this.subscribers = {};
   }
 
@@ -42,4 +40,3 @@
     });
 
   };
-})();

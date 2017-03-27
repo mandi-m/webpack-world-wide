@@ -17,9 +17,21 @@
             <div class="marker" id="brown"></div>
         </div>
 
-        <script src="/socket.io/socket.io.js"></script>
+        <!--<script src="/socket.io/socket.io.js"></script>
         <script src="event-emitter.js"></script>
         <script src="whiteboard.js"></script>
-        <script src="app.js"></script>
+        <script src="app.js"></script>-->
+        <script src="bundle.js"></script>
     </body>
 </html>
+
+<!--Dependency tree:
+
+/socket.io/socket.io.js sets up a socket on our server, ready for others to connect to
+
+event-emitter.js is executed, attaches a property to the window object, which is a constructor function
+
+whiteboard.js: creates window.whiteboard, which is an instance of an event emitter that we defined in event-emitter
+
+app.js:
+needs window.whiteboard, and window.io from socket.io-->
